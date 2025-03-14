@@ -6,9 +6,6 @@ body {
   text-align: center;
 }
 
-h2 {
-font-size: 30px;
-}
 
 /* Navbar */
 header {
@@ -22,6 +19,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(2px);
 }
 
 /* Section Contact */
@@ -49,7 +47,7 @@ header {
 }
 
 .contact-left h2 {
-  font-size: 40px;
+  font-size: 60px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
