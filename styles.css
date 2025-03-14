@@ -6,69 +6,78 @@ body {
   text-align: center;
 }
 
+h2 {
+  font-size: 30px;
+}
 
 /* Navbar */
 header {
   width: 100%;
-  height: 200px;
+  height: 150px; /* Réduire la taille de l'image */
   background-color: rgba(0, 0, 0, 0.7);
   overflow: hidden;
+  position: relative;
 }
 
 #nav-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(2px);
 }
 
 /* Section Contact */
 #contact {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px ;
+  align-items: flex-start;
+  padding: 40px 0; /* Réduire l'espace en haut et en bas */
+  min-height: auto
 }
 
 .contact-container {
   display: grid;
-  grid-template-columns: 800px 1000px;
-  width: 100%;
-  max-width:1200px;
-  align-items: center;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes égales */
+  align-items: stretch; /* Assure que les deux colonnes aient la même hauteur */
+  gap: 40px;
+  width: 80%;
+  max-width: 1200px;
 }
 
 /* Partie gauche (3D + Texte) */
 .contact-left {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1; /* Permet à la colonne d'occuper tout l'espace disponible */
 }
 
 .contact-left h2 {
-  font-size: 60px;
+  font-size: 40px;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
-.contact-left p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-#3d-container {
-  width: 100%;
-  height: 300px;
+#3d-image {
+  width: 150px; /* Taille fixe */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto 0;
 }
 
 /* Partie droite (Formulaire) */
 .contact-right {
-  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Assure que cette partie a la même taille que la gauche */
 }
 
 #contact-form {
@@ -82,8 +91,9 @@ header {
   margin: 10px 0 5px;
 }
 
-#contact-form input, #contact-form textarea {
-  width: 95%;
+#contact-form input,
+#contact-form textarea {
+  width: 95%; /* Assurer une largeur uniforme */
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
@@ -91,7 +101,7 @@ header {
 }
 
 #contact-form button {
-  background: #007bff;
+  background: #4c4c4c;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -102,15 +112,19 @@ header {
 /* Responsive */
 @media (max-width: 768px) {
   .contact-container {
-      flex-direction: column;
-      text-align: center;
+    grid-template-columns: 1fr;
   }
 
-  .contact-left, .contact-right {
-      width: 100%;
+  .contact-left,
+  .contact-right {
+    width: 100%;
   }
 
-  #3d-container {
-      height: 250px;
+  .contact-left h2 {
+    font-size: 25px;
+  }
+
+  #3d-image {
+    width: 120px; /* Réduction pour mobile */
   }
 }
