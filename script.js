@@ -1,13 +1,3 @@
-// Réduction de la navbar au scroll
-window.addEventListener("scroll", function () {
-  let navbar = document.getElementById("navbar");
-  if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-  } else {
-      navbar.classList.remove("scrolled");
-  }
-});
-
 // Initialisation de Three.js pour l'animation 3D
 function init3D() {
   let container = document.getElementById("3d-container");
